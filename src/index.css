@@ -1,0 +1,577 @@
+@import url('vars.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.LoginContainer{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.LoginCard, .ForgotPasswordCard {
+    background: linear-gradient(
+            180deg,
+            rgba(25, 135, 84, 1) 0%,
+            rgba(15, 81, 50, 1) 100%
+    );
+    border-radius: 30px;
+    padding: 20px;
+    width: 650px;
+    height: 715px; /* Forces both cards to stay equal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Brgy360logo{
+    width: 274px;
+    height: 274px;
+    position: relative;
+
+    object-fit: cover;
+    aspect-ratio: 1;
+
+}
+.loginTitle{
+    color: #f9f9f7;
+    text-align: center;
+    font-family: var(--poppins-h2-bold-font-family, "Poppins-Bold", sans-serif);
+    font-size: var(--poppins-h2-bold-font-size, 40px);
+    line-height: var(--poppins-h2-bold-line-height, 140%);
+    font-weight: var(--poppins-h2-bold-font-weight, 700);
+
+
+
+}
+.loginpassbuttons {
+    border-color: white;
+    border-radius: 25px;
+    border-width: 1px;
+    width: 100%;
+    padding: 25px 18px;
+    font-size: 20px;
+    background: none;
+ box-sizing: border-box;
+
+
+}
+.RememberMe {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+}
+
+/* Styling for the checkbox */
+#myCheckbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none; /* Hides default checkbox */
+    background: transparent;
+    position: relative;
+}
+
+/* Checkbox when checked */
+#myCheckbox:checked {
+    background-color: white;
+    border-color: white;
+}
+
+.forgetpassword{
+    color: white;
+    text-align: center;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    position: relative;
+    width: 192px;
+    height: 26px;
+}
+.buttonsLS {
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: green;
+    padding: 18px 41px;
+}
+.inputcontainer {
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.RMcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 18px;
+
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+
+}
+.Mother{
+    width: 438px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+.ForgotPasswordContainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.forgotTitle {
+    color: #f9f9f7;
+    text-align: center;
+    font-family: var(--poppins-h2-bold-font-family, "Poppins-Bold", sans-serif);
+    font-size: var(--poppins-h2-bold-font-size, 40px);
+    line-height: var(--poppins-h2-bold-line-height, 140%);
+    font-weight: var(--poppins-h2-bold-font-weight, 700);
+}
+
+.forgotSubtitle {
+    color: white;
+    text-align: center;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.forgotInput {
+    border-color: white;
+    border-radius: 25px;
+    border-width: 1px;
+    width: 100%;
+    padding: 25px 18px;
+    font-size: 20px;
+    background: none;
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+
+
+}
+
+.forgotButton {
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: green;
+    padding: 18px 41px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 81px;
+}
+
+.forgotButton:hover {
+    background-color: #e0e0e0;
+}
+
+
+.ResetPasswordContainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ResetPasswordCard {
+    background: linear-gradient(
+            180deg,
+            rgba(25, 135, 84, 1) 0%,
+            rgba(15, 81, 50, 1) 100%
+    );
+    border-radius: 30px;
+    padding: 20px;
+    width: 650px;
+    height: 715px; /* Keeping consistency with other cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Brgy360logo {
+    width: 274px;
+    height: 274px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.resetTitle {
+    color: #f9f9f7;
+    text-align: center;
+    font-family: var(--poppins-h2-bold-font-family, "Poppins-Bold", sans-serif);
+    font-size: var(--poppins-h2-bold-font-size, 40px);
+    line-height: var(--poppins-h2-bold-line-height, 140%);
+    font-weight: var(--poppins-h2-bold-font-weight, 700);
+}
+
+.resetSubtitle {
+    color: white;
+    text-align: left; /* Aligns text to the left */
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    margin-bottom: 15px;
+    width: 100%; /* Ensures it spans the full container width */
+    padding-left: 10px; /* Adds slight spacing for better appearance */
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.resetInput {
+    border-color: white;
+    border-radius: 25px;
+    border-width: 1px;
+    width: 100%;
+    padding: 25px 18px;
+    font-size: 20px;
+    background: none;
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+}
+
+.resetButton {
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: green;
+    padding: 18px 41px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 81px;
+}
+
+.resetButton:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+
+.SuccessContainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.SuccessCard {
+    background: linear-gradient(
+            180deg,
+            rgba(25, 135, 84, 1) 0%,
+            rgba(15, 81, 50, 1) 100%
+    );
+    border-radius: 30px;
+    padding: 20px;
+    width: 650px;
+    height: 715px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SuccessLogo {
+    width: 274px;
+    height: 274px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.SuccessTitle {
+    color: #f9f9f7;
+    text-align: center;
+    font-family: var(--poppins-h2-bold-font-family, "Poppins-Bold", sans-serif);
+    font-size: var(--poppins-h2-bold-font-size, 40px);
+    line-height: var(--poppins-h2-bold-line-height, 140%);
+    font-weight: var(--poppins-h2-bold-font-weight, 700);
+}
+
+.SuccessMessage {
+    color: white;
+    text-align: center;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.SuccessIcon {
+    width: 100px;
+    height: 100px;
+    filter: brightness(0) invert(1); /* Turns black icons white */
+}
+
+.SuccessButton {
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: green;
+    padding: 18px 41px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.SuccessButton:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+.customCheckbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.customCheckbox input {
+    display: none;
+}
+
+.customCheckbox .checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.customCheckbox input:checked + .checkmark::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+}
+
+/* Signup Page Container */
+.SignupContainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Signup Card */
+.SignupCard {
+    background: linear-gradient(
+            180deg,
+            rgba(25, 135, 84, 1) 0%,
+            rgba(15, 81, 50, 1) 100%
+    );
+    border-radius: 30px;
+    padding: 20px;
+    width: 650px;
+    height: 715px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo Styling */
+.Brgy360logo {
+    width: 274px;
+    height: 274px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+/* Signup Title */
+.signupTitle {
+    color: #f9f9f7;
+    text-align: center;
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+/* Form Styling */
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Input Fields */
+.inputField {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 80%;
+    padding: 15px 18px;
+    font-size: 18px;
+    background: none;
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* Signup Button */
+.signupButton {
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: green;
+    padding: 15px 41px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.signupButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* Custom Checkbox */
+.customCheckbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 10px 0;
+}
+
+/* Hide default checkbox */
+.customCheckbox input {
+    display: none;
+}
+
+/* Checkbox appearance */
+.customCheckbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+/* Checkmark when checked */
+.customCheckbox input:checked + .checkmark::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+}
+
+/* Checkbox Text */
+.checkboxText {
+    color: white;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/* Login Redirect */
+.loginRedirect {
+    color: white;
+    text-align: center;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.loginRedirect a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.loginRedirect a:hover {
+    text-decoration: underline;
+}
+
+
