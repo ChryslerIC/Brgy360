@@ -1,11 +1,44 @@
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import React, { useState } from "react";
+import Header from "../assets/header/Header.jsx";
+import {useAuth} from "../auth/authContext.jsx";
+import validator from "validator";
+
 
 const Login = () => {
     const [isChecked, setIsChecked] = useState(false);
+    const {login, user} = useAuth();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
+    };
+
+    const isValidEmail = (email) => {
+        return validator.isEmail(email);
+    };
+
+    const handleLogin = async (e) => {
+        // Navigate to CreatingProfile after clicking Sign Up
+        e.preventDefault();
+        try{
+            if (!email || !password) {
+                alert("Please fill in both email and password.");
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Email address not valid.");
+                return;
+            }
+
+            await login(email, password);
+            navigate("/Home");
+        } catch (error) {
+            alert(`Failed to Login: ${error}`);
+        }
     };
 
     return (
@@ -15,9 +48,10 @@ const Login = () => {
                 <h1 className="loginTitle">Brgy360</h1>
                 <div className="Mother">
                     <div className="inputcontainer">
-                        <input className="loginpassbuttons" type="Email" placeholder="EMAIL"/>
-                        <input className="loginpassbuttons" type="Password" placeholder="PASSWORD"/>
-                    </div>
+                        <input className="loginpassbuttons" type="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="EMAIL"/>
+                        <input className="loginpassbuttons" type="Password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="PASSWORD"/>
+
+                        </div>
                     <div className="RMcontainer">
                         <div className="RememberMe">
                             <label className="customCheckbox">
@@ -50,6 +84,7 @@ const Login = () => {
                             className="buttonsLS"
                             onMouseEnter={(e) => e.target.style.opacity = "0.8"}
                             onMouseLeave={(e) => e.target.style.opacity = "1"}
+                            onClick={handleLogin}
                         >
                             Log in
                         </button>

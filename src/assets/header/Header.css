@@ -1,0 +1,27 @@
+/* Ensure the header stays at the top */
+.header-2 {
+    background: #e5e3d9;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 107px;
+    position: sticky; /* Sticks within its parent container */
+    top: 0; /* Crucial: Pins it to the top of the viewport or parent */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    z-index: 10; /* Ensures it stays above other content */
+    width: 100vw; /* Full viewport width */
+    margin: 0; /* Prevents unwanted spacing */
+    padding: 0; /* Optional: Ensures no extra padding */
+}
+
+.brgy-360-1 {
+    width: 99px;
+    height: 99px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    aspect-ratio: 1;
+}

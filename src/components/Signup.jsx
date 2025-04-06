@@ -1,12 +1,49 @@
 import { Link, useNavigate } from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
+import {useAuth} from "../auth/authContext.jsx";
+import validator from 'validator';
 
 const Signup = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const navigate = useNavigate(); // Hook to navigate between pages
+    const {signUp, user} = useAuth();
 
-    const handleSignup = () => {
+    const isValidPassword = (password, confirmPassword) => {
+        return password === confirmPassword;
+    }
+
+    const isValidEmail = (email) => {
+        return validator.isEmail(email);
+    };
+
+    const handleSignup = async (e) => {
         // Navigate to CreatingProfile after clicking Sign Up
-        navigate("/creatingprofile");
+        e.preventDefault();
+        try{
+            if (!email || !password) {
+                alert("Please fill in both email and password.");
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Email address not valid.");
+                return;
+            }
+
+
+            if (!isValidPassword(password, confirmPassword)) {
+                alert("Password doesn't match.");
+                return;
+            }
+
+            await signUp(email, password);
+            console.log(user);
+            navigate("/creatingprofile");
+        } catch (error) {
+            alert(`Failed to create account: ${error}`);
+        }
     };
 
     return (
@@ -19,9 +56,9 @@ const Signup = () => {
                 />
                 <h1 className="signupTitle">BRGY360</h1>
                 <div className="FormContainer">
-                    <input className="inputField" type="email" placeholder="EMAIL" />
-                    <input className="inputField" type="password" placeholder="ENTER PASSWORD" />
-                    <input className="inputField" type="password" placeholder="RE-ENTER PASSWORD" />
+                    <input className="inputField" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="EMAIL" />
+                    <input className="inputField" type="password" value={password} onChange={(e) => setPassword(e.target.value)}  placeholder="ENTER PASSWORD" />
+                    <input className="inputField" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  placeholder="RE-ENTER PASSWORD" />
                     <button className="signupButton" onClick={handleSignup}>
                         SIGN UP
                     </button>

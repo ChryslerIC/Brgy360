@@ -6,14 +6,26 @@
     font-family: sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
 
-.LoginContainer{
+
+.LoginContainer {
     background-color: whitesmoke;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
+
 .LoginCard, .ForgotPasswordCard {
     background: linear-gradient(
             180deg,
@@ -575,3 +587,289 @@ display: flex;
 }
 
 
+/* Creatingprofile */
+.container {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    height: 100vh;
+    padding-left: 100px; /* Adjust spacing from left edge */
+}
+
+/* Profile Section (Left Aligned) */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+    margin-right: 20px; /* Space between profile and form */
+}
+
+/* Profile Image */
+.profile-image-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #2E7D32; /* Green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/* Edit Icon */
+.edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Prevent overflow of inputs */
+}
+
+/* Form Layout */
+.profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 15px;
+    width: 100%;
+}
+
+/* Full-width inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Form Layout Adjustments for Left and Right Side */
+.name-container,
+.dob-container,
+.street-container {
+    grid-column: 1; /* Left side (name, dob, street) */
+}
+
+.age-container,
+.sex-container,
+.place-container,
+.barangay-container {
+    grid-column: 2; /* Right side (age, sex, place, barangay) */
+}
+
+/* Input Styling */
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box; /* Prevent overflow of input elements */
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Next Button (Outside Card, Below Card) */
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.next-button {
+    padding: 10px 20px;
+    background: #165B33; /* Dark Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+.next-button:hover {
+    background: #114b2c;
+}
+
+
+/* Center the content in the viewport */
+body, .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background: #efeee8; /* Clean background color */
+}
+
+/* Main verification box */
+.verification {
+
+    width: 488px; /* Fixed width */
+    height: 740px; /* Fixed height */
+    padding: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px; /* Optional rounded corners */
+
+}
+
+/* Dropdown for choosing ID */
+.form-elemnet-varints {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-elemnet-source {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 18px;
+    color: #060e1b;
+    font-weight: 600; /* Slightly bolder text for labels */
+}
+
+.dropdown {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #092f1d;
+    padding: 12px;
+    height: 50px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Image placeholders for front and back of ID */
+.rectangle-44, .rectangle-45 {
+    background: #d9d9d9;
+    border-radius: 25px;
+    width: 100%;
+    height: 180px; /* Adjusted height for better fit */
+    position: relative;
+    margin-top: 20px;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.plus-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.label-text {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.frame-1321314484 {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button, .button3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 180px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.button {
+    border: 3px solid #0f5132;
+    color: #0f5132;
+}
+
+.button3 {
+    background: #0f5132;
+    color: white;
+    border: 1px solid #13653f;
+}
+
+/* Texts for Front and Back of ID */
+.front-of-id, .back-of-id {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+.front-of-id {
+    top: 140px; /* Adjusted position */
+}
+
+.back-of-id {
+    top: 400px; /* Adjusted position */
+}
+
+.dropdown:hover {
+    border-color: #0f5132;
+}
+
+/* Hover effect for image placeholders */
+.rectangle-44:hover, .rectangle-45:hover {
+    background: #c4c4c4;
+    cursor: pointer;
+}
+
+/* Hover effects for buttons */
+.button:hover {
+    background: #0f5132;
+    color: white;
+}
+
+.button3:hover {
+    background: #13653f;
+    border-color: #0f5132;
+}
